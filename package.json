@@ -6,10 +6,23 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/bearer": "^1.4.3",
+    "@elysiajs/cors": "^1.4.1",
+    "@elysiajs/jwt": "^1.4.0",
+    "drizzle-orm": "^0.45.1",
+    "elysia": "^1.4.26",
+    "pg": "^8.19.0"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/bun": "latest",
+    "@types/pg": "^8.16.0",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.31.9"
   },
-  "module": "src/index.js"
+  "module": "src/index.js",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  }
 }
