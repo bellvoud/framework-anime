@@ -3,7 +3,12 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "seed": "bun src/config/seed.ts"
   },
   "dependencies": {
     "@elysiajs/bearer": "^1.4.3",
@@ -11,13 +16,14 @@
     "@elysiajs/jwt": "^1.4.0",
     "drizzle-orm": "^0.45.1",
     "elysia": "^1.4.26",
-    "pg": "^8.19.0"
+    "pg": "^8.19.0",
+    "postgres": "^3.4.8"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/pg": "^8.16.0",
     "bun-types": "latest",
-    "drizzle-kit": "^0.31.9"
+    "drizzle-kit": "^0.31.10"
   },
   "module": "src/index.js",
   "type": "module",
